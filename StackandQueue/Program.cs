@@ -8,22 +8,12 @@ namespace StackandQueue
 
         public static void Main(string[] args)
         {
-            Stack_Ex stackobj = new Stack_Ex();
-            stackobj.Push(20);
-            stackobj.Push(30);
-            stackobj.Push(40);
-            stackobj.Display();
-            stackobj.peek();
-            stackobj.pop();
-            stackobj.Display();
-
-            stackobj.peek();
-            stackobj.pop();
-            stackobj.Display();
-
-            stackobj.peek();
-            stackobj.pop();
-            stackobj.Display();
+            
+            Queue_Ex queueobj=new Queue_Ex();
+            queueobj.Enqueue(10);
+            queueobj.Enqueue(20);
+            queueobj.Enqueue(30);
+            queueobj.Display();
         }
     }
 
