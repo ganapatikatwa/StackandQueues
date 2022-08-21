@@ -14,11 +14,10 @@ namespace StackandQueue
         public void Enqueue(int data)
         {
             Node newnode = new Node(data);
-                if (front==null)
+            if (front == null)
             {
                 rear = newnode;
                 front = rear;
-
             }
             else
             {
@@ -29,16 +28,28 @@ namespace StackandQueue
 
         public void Display()
         {
-            if (front==null)
+            if (front == null)
             {
-                Console.WriteLine("Queue Is Empty");
+                Console.WriteLine("Stack is empty");
             }
             Node temp = front;
-            while(temp!=null)
+            while (temp != null)
             {
-                Console.WriteLine("| "+temp.data+" |");
+                Console.WriteLine(" " + temp.data + " ");
                 temp = temp.Next;
             }
+        }
+        
+        public void Dequeue()
+        {
+            if (this.front==null)
+            {
+                Console.WriteLine("Queue is Empty,Deletion is not Possible");
+                return;
+            }
+            Console.WriteLine("{0} is element Dequeue", this.front.data);
+            this.front = this.front.Next;
+
         }
     }
 }
