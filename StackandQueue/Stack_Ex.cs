@@ -26,7 +26,7 @@ namespace StackandQueue
         {
             if(top==null)
             {
-                Console.WriteLine("Stack id Emoty");
+                Console.WriteLine("Stack id Empty");
             }
             Node temp = top;
             while(temp!=null)
@@ -35,6 +35,25 @@ namespace StackandQueue
                 temp = temp.Next;
 
             }
+        }
+        public void peek()
+        {
+            if(top==null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Node temp = top;
+            Console.WriteLine(temp.data+"is top element");
+        }
+
+        public void pop()
+        {
+            if(top==null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            this.top = this.top.Next;
+
         }
     }
 }
